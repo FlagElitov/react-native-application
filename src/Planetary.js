@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 
 import Content from "./Content";
 import axios from "axios";
@@ -14,11 +14,10 @@ const Planetary = () => {
       .then((res) => setState(res.data));
   }, []);
   return (
-    <View >
+    <View>
       <Content state={state} />
     </View>
   );
 };
-
 
 export default Planetary;
