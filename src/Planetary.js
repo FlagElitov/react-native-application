@@ -14,17 +14,11 @@ const Planetary = () => {
       .then((res) => setState(res.data));
   }, []);
   return (
-    <View style={styles.container}>
+    <View >
       <Content state={state} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {},
-  text: {
-    fontSize: 23,
-    color: "#000",
-  },
-});
+
 export default Planetary;
