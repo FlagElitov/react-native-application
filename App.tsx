@@ -5,7 +5,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Planetary from "./src/Planetary";
 
-const HomeScreen = ({ navigation }) => {
+interface props {
+  navigation: any;
+}
+
+const HomeScreen: React.FC<props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home Screen</Text>

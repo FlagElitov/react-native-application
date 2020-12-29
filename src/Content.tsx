@@ -1,24 +1,29 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { PlanetaryData } from "./Planetary";
 
-const Content = ({ state }) => {
+const Content: React.FC<PlanetaryData | undefined> = ({
+  url,
+  title,
+  date,
+  service_version,
+  explanation,
+}) => {
   return (
     <View style={styles.content}>
       <ScrollView>
         <Image
           style={styles.img}
           source={{
-            uri: state && state.hdurl,
+            uri: url,
           }}
         />
 
-        <Text style={styles.title}>Name : {state && state.title}</Text>
+        <Text style={styles.title}>Name : {title}</Text>
 
-        <Text style={styles.text}>Date : {state && state.date}</Text>
-        <Text style={styles.text}>
-          Service_version : {state && state.service_version}
-        </Text>
-        <Text style={styles.text}>{state && state.explanation}</Text>
+        <Text style={styles.text}>Date : {date}</Text>
+        <Text style={styles.text}>Service_version : {service_version}</Text>
+        <Text style={styles.text}>{explanation}</Text>
       </ScrollView>
     </View>
   );
