@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { PlanetaryData } from "./Planetary";
 
-const Content: React.FC<PlanetaryData | undefined> = ({
+const Content: React.FC<PlanetaryData> = ({
   url,
   title,
   date,
@@ -15,7 +15,7 @@ const Content: React.FC<PlanetaryData | undefined> = ({
         <Image
           style={styles.img}
           source={{
-            uri: url,
+            uri: url ? url : "Sorry",
           }}
         />
 
