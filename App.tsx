@@ -5,7 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Planetary from "./src/Planetary";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }: { navigation: any }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home Screen</Text>
@@ -65,55 +65,3 @@ function App() {
 }
 
 export default App;
-
-// function DetailScreen({ navigation }) {
-//   return (
-//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Text>Detail Screen </Text>
-//       <Button
-//         title="GO to detsils"
-//         onPress={() => navigation.navigate("Details")}
-//       ></Button>
-//       <Button
-//         title="GO to Home"
-//         onPress={() => navigation.navigate("Home")}
-//       ></Button>
-//       <Button title="GO to back" onPress={() => navigation.goBack()}></Button>
-//       <Button
-//         title="GO to first screen"
-//         onPress={() => navigation.popToTop()}
-//       ></Button>
-//     </View>
-//   );
-// }
-
-// import React from "react";
-// import { Button, StyleSheet, Text, View } from "react-native";
-
-// import Content from "./Content";
-// import axios from "axios";
-
-// const Planetary = () => {
-//   const API_KEY = "Bm5oBuVTS8seqOONvgjutNa1Ygr6Vg1XvfXmkk2O";
-//   const [state, setState] = React.useState();
-
-//   React.useEffect(() => {
-//     axios
-//       .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
-//       .then((res) => setState(res.data));
-//   }, []);
-//   return (
-//     <View style={styles.container}>
-//       <Content state={state} />
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {},
-//   text: {
-//     fontSize: 23,
-//     color: "#000",
-//   },
-// });
-// export default Planetary;
