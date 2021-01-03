@@ -18,9 +18,7 @@ const Content: React.FC<PlanetaryData> = ({
             uri: url ? url : "Sorry",
           }}
         />
-
         <Text style={styles.title}>Name : {title}</Text>
-
         <Text style={styles.text}>Date : {date}</Text>
         <Text style={styles.text}>Service_version : {service_version}</Text>
         <Text style={styles.text}>{explanation}</Text>
